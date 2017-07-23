@@ -24,10 +24,11 @@ def run_game():
         gf.check_events()
 
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
+        # screen.fill(ai_settings.bg_color)
+        # ship.blitme()
+        gf.update_screen(ai_settings,screen,ship)
 
-        #display the screen
-        pygame.display.flip()
+        # #display the screen
+        # pygame.display.flip()
 
 run_game()
