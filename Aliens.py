@@ -1,6 +1,7 @@
 import sys 
 import pygame
 from settings import Settings
+from ship import Ship
 
 def run_game():
     #init and creat a screen object
@@ -12,6 +13,8 @@ def run_game():
 
     #bg_color = (230,230,230) #set the background color
     
+    ship = Ship(screen)#creat a ship 
+
     while True:
         #watch the keyboad and mouse
         for event in pygame.event.get():
@@ -20,6 +23,7 @@ def run_game():
 
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         screen.fill(ai_settings.bg_color)
+        ship.blitme()
 
         #display the screen
         pygame.display.flip()
