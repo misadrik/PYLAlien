@@ -3,5 +3,5 @@ class Settings():
     def __init__(self):
         #init all the settings
         self.screen_width = 720
-        self.screem_heigth = 640
+        self.screen_height = 640
         self.bg_color = (230,230,230)
