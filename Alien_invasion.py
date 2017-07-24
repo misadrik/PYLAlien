@@ -3,7 +3,8 @@ import pygame
 from settings import Settings
 from ship import Ship
 import game_functions as gf
-from pygame.sprite import Group 
+from pygame.sprite import Group
+from alien import Alien 
 
 def run_game():
     #init and creat a screen object
@@ -19,7 +20,9 @@ def run_game():
     
     ship = Ship(ai_settings,screen)#creat a ship 
     bullets = Group()
-
+    #alien = Alien(ai_settings,screen)
+    aliens = Group()
+    gf.create_fleet(ai_settings, screen, aliens)
 
 
     while True:
@@ -36,8 +39,9 @@ def run_game():
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         # screen.fill(ai_settings.bg_color)
         # ship.blitme()
+        # alien.blitme()
         
-        gf.update_screen(ai_settings,screen,ship,bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
         # #display the screen
         # pygame.display.flip()

@@ -14,7 +14,7 @@ class Alien(Sprite):
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height
 
-        self.float.x = float(self.rect.x)
+        self.x = float(self.rect.x)
 
     def blitme(self):
         self.screen.blit(self.image,self.rect)
