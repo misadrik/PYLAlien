@@ -28,13 +28,8 @@ def run_game():
         gf.check_events(ai_settings, screen, ship, bullets)
 
         ship.update()
-        bullets.update()
-
-        for bullet in bullet.copy():
-            if bullet.rect.bottom <= 0:
-                bullets.remove(bullet)
-        print(len(bullets))
-
+       
+        gf.update_bullets(bullets)
 
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         # screen.fill(ai_settings.bg_color)
