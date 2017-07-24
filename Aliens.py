@@ -3,6 +3,7 @@ import pygame
 from settings import Settings
 from ship import Ship
 import game_functions as gf
+from pygame.sprite import Group 
 
 def run_game():
     #init and creat a screen object
@@ -15,6 +16,7 @@ def run_game():
     #bg_color = (230,230,230) #set the background color
     
     ship = Ship(ai_settings,screen)#creat a ship 
+    bullets = Group()
 
 
 
@@ -23,14 +25,21 @@ def run_game():
         # for event in pygame.event.get():
         #     if event.type == pygame.QUIT:
         #         sys.exit()
-        gf.check_events(ship)
+        gf.check_events(ai_settings, screen, ship, bullets)
 
         ship.update()
+        bullets.update()
+
+        for bullet in bullet.copy():
+            if bullet.rect.bottom <= 0:
+                bullets.remove(bullet)
+        print(len(bullets))
+
 
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         # screen.fill(ai_settings.bg_color)
         # ship.blitme()
-        gf.update_screen(ai_settings,screen,ship)
+        gf.update_screen(ai_settings,screen,ship,bullets)
 
         # #display the screen
         # pygame.display.flip()
