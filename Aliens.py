@@ -23,6 +23,8 @@ def run_game():
         #         sys.exit()
         gf.check_events(ship)
 
+        ship.update()
+
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         # screen.fill(ai_settings.bg_color)
         # ship.blitme()
