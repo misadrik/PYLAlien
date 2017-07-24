@@ -14,7 +14,9 @@ def run_game():
 
     #bg_color = (230,230,230) #set the background color
     
-    ship = Ship(screen)#creat a ship 
+    ship = Ship(ai_settings,screen)#creat a ship 
+
+
 
     while True:
         # #watch the keyboad and mouse
