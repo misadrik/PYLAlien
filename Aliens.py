@@ -7,8 +7,10 @@ from pygame.sprite import Group
 
 def run_game():
     #init and creat a screen object
-    pygame.init() 
+    pygame.init()
+
     ai_settings = Settings()
+    
     screen = pygame.display.set_mode(
         (ai_settings.screen_width,ai_settings.screen_height))
     pygame.display.set_caption("Alien Invasion")
@@ -34,6 +36,7 @@ def run_game():
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         # screen.fill(ai_settings.bg_color)
         # ship.blitme()
+        
         gf.update_screen(ai_settings,screen,ship,bullets)
 
         # #display the screen
