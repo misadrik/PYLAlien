@@ -68,8 +68,8 @@ def get_number_aliens_x(ai_settings, alien_width):
 
     return number_alien_x
 # creat one alien
-def create_alien(alien_number, ai_settings, screen,alien, aliens):
-#    alien = Alien(ai_settings, screen)    
+def create_alien(alien_number, ai_settings, screen, aliens):
+    alien = Alien(ai_settings, screen)    
     alien_width = alien.rect.width 
     #alien = Alien(ai_settings,screen)
     alien.x = alien_width + alien_number * alien_width * 2
@@ -84,7 +84,7 @@ def create_fleet(ai_settings, screen, aliens):
     number_alien_x = get_number_aliens_x(ai_settings, alien.rect.width)
     
     for alien_number in range(number_alien_x):
-        create_alien(alien_number, ai_settings, screen, alien, aliens)
+        create_alien(alien_number, ai_settings, screen, aliens)
 
 
 
