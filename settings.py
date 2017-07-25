@@ -8,6 +8,7 @@ class Settings():
 
         # the speed of ship's move
         self.ship_speed_factor = 1.5
+        self.alien_speed_factor = 1
 
         self.bullet_speed_factor = 1
         self.bullet_width = 3

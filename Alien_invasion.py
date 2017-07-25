@@ -33,6 +33,7 @@ def run_game():
         gf.check_events(ai_settings, screen, ship, bullets)
 
         ship.update()
+        aliens.update()
        
         gf.update_bullets(bullets)
 
