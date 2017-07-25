@@ -34,10 +34,9 @@ def run_game():
 
         ship.update()
         #aliens.update()
-       
+        gf.update_bullets(ai_settings,screen,ship, aliens, bullets)
         gf.update_aliens(ai_settings,aliens)
 
-        gf.update_bullets(bullets)
 
         # refill the screen everytimegit remote add origin git@github.com:qy19941014/PYLAlien.git        
         # screen.fill(ai_settings.bg_color)
